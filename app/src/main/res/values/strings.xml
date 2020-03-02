@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">AndroidInterviewApp</string>
+    <string name="app_name">Вопросы к собеседованию</string>
+    <string name="title_home">Домой</string>
+    <string name="title_settings">Настройки</string>
 </resources>
