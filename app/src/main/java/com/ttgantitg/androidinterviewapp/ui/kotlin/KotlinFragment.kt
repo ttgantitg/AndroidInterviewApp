@@ -19,11 +19,6 @@ class KotlinFragment : Fragment() {
     ): View? {
         kotlinViewModel =
             ViewModelProvider(this).get(KotlinViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_kotlin, container, false)
-//        val textView: TextView = root.findViewById(R.id.text_home)
-//        homeViewModel.text.observe(this, Observer {
-//            textView.text = it
-//        })
-        return root
+        return inflater.inflate(R.layout.fragment_kotlin, container, false)
     }
 }

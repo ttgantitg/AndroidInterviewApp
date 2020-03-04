@@ -6,4 +6,5 @@
     <color name="colorBottomNav">#546E7A</color>
     <color name="colorAccent">#F9AA33</color>
     <color name="colorTint">#FFFFFF</color>
+    <color name="colorPrimaryText">#FFFFFF</color>
 </resources>
