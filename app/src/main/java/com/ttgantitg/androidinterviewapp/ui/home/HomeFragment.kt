@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import com.ttgantitg.androidinterviewapp.R
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
 
@@ -25,5 +27,15 @@ class HomeFragment : Fragment() {
 //            textView.text = it
 //        })
         return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        java_button.setOnClickListener (Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_navigation_java))
+        kotlin_button.setOnClickListener (Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_navigation_kotlin))
+        android_button.setOnClickListener (Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_navigation_android))
+        libs_button.setOnClickListener (Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_navigation_libs))
+        general_button.setOnClickListener (Navigation.createNavigateOnClickListener(R.id.action_navigation_home_to_navigation_general))
     }
 }

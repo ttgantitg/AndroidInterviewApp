@@ -2,4 +2,9 @@
     <string name="app_name">Вопросы к собеседованию</string>
     <string name="title_home">Домой</string>
     <string name="title_settings">Настройки</string>
+    <string name="java_questions">Вопросы по Java</string>
+    <string name="kotlin_questions">Вопросы по Kotlin</string>
+    <string name="android_questions">Вопросы по Android</string>
+    <string name="libs_questions">Вопросы по библиотекам</string>
+    <string name="general_questions">Общие вопросы</string>
 </resources>

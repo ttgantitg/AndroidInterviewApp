@@ -35,7 +35,7 @@
             android:text="ANDROID" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/libraries_button"
+            android:id="@+id/libs_button"
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:text="Библиотеки" />

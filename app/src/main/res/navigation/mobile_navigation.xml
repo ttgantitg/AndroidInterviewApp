@@ -10,12 +10,58 @@
         android:id="@+id/navigation_home"
         android:name="com.ttgantitg.androidinterviewapp.ui.home.HomeFragment"
         android:label="@string/app_name"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_java"
+            app:destination="@id/navigation_java" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_kotlin"
+            app:destination="@id/navigation_kotlin" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_android"
+            app:destination="@id/navigation_android" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_libs"
+            app:destination="@id/navigation_libs" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_general"
+            app:destination="@id/navigation_general" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_settings"
         android:name="com.ttgantitg.androidinterviewapp.ui.settings.SettingsFragment"
         android:label="@string/title_settings"
         tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/navigation_java"
+        android:name="com.ttgantitg.androidinterviewapp.ui.java.JavaFragment"
+        android:label="@string/java_questions"
+        tools:layout="@layout/fragment_java" />
+
+    <fragment
+        android:id="@+id/navigation_kotlin"
+        android:name="com.ttgantitg.androidinterviewapp.ui.kotlin.KotlinFragment"
+        android:label="@string/kotlin_questions"
+        tools:layout="@layout/fragment_kotlin" />
+
+    <fragment
+        android:id="@+id/navigation_android"
+        android:name="com.ttgantitg.androidinterviewapp.ui.android.AndroidFragment"
+        android:label="@string/android_questions"
+        tools:layout="@layout/fragment_android" />
+
+    <fragment
+        android:id="@+id/navigation_libs"
+        android:name="com.ttgantitg.androidinterviewapp.ui.libs.LibsFragment"
+        android:label="@string/libs_questions"
+        tools:layout="@layout/fragment_libs" />
+
+    <fragment
+        android:id="@+id/navigation_general"
+        android:name="com.ttgantitg.androidinterviewapp.ui.general.GeneralFragment"
+        android:label="@string/general_questions"
+        tools:layout="@layout/fragment_general" />
 
 </navigation>
