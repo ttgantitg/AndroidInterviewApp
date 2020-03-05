@@ -13,7 +13,7 @@ abstract class AppDatabase : RoomDatabase() {
     companion object {
         const val DATABASE_VERSION = 1
         private const val DATABASE_NAME = "interview.db"
-        var INSTANCE: AppDatabase? = null
+        private var INSTANCE: AppDatabase? = null
 
         fun getAppDataBase(context: Context): AppDatabase? {
             if (INSTANCE == null){
