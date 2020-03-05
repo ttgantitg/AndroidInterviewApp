@@ -6,11 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".ui.kotlin.KotlinFragment">
 
-    <ExpandableListView
-        android:id="@+id/exp_list_view"
+<!--    <ExpandableListView-->
+<!--        android:id="@+id/exp_list_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="16sp"-->
+<!--        android:dividerHeight="0.5dp"/>-->
+    <TextView
+        android:id="@+id/mText_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:dividerHeight="0.5dp"/>
+        android:layout_height="match_parent"/>
 
 </FrameLayout>
