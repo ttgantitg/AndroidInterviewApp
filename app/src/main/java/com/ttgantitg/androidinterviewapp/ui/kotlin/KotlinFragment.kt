@@ -7,9 +7,12 @@ import android.view.ViewGroup
 import android.widget.ExpandableListAdapter
 import android.widget.ExpandableListView
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.ttgantitg.androidinterviewapp.CustomExpandableListAdapter
 import com.ttgantitg.androidinterviewapp.R
+import kotlin.collections.ArrayList
+import kotlin.collections.HashMap
 
 class KotlinFragment : Fragment() {
 
@@ -27,6 +30,7 @@ class KotlinFragment : Fragment() {
     ): View? {
         val root = inflater.inflate(R.layout.fragment_kotlin, container, false)
         kotlinViewModel = ViewModelProvider(this).get(KotlinViewModel::class.java)
+        kotlinViewModel.getData()
         expandableListView = root.findViewById(R.id.exp_list_view)
         initExpListView()
         return root
@@ -50,41 +54,12 @@ class KotlinFragment : Fragment() {
 
     private fun prepareDataList() {
 
-        val redmiMobiles = ArrayList<String>()
-        redmiMobiles.add("Redmi Y2")
-        redmiMobiles.add("Redmi S2")
-        redmiMobiles.add("Redmi Note 5 Pro")
-        redmiMobiles.add("Redmi Note 5")
-        redmiMobiles.add("Redmi 5 Plus")
-        redmiMobiles.add("Redmi Y1")
-        redmiMobiles.add("Redmi 3S Plus")
-
-        val micromaxMobiles = ArrayList<String>()
-        micromaxMobiles.add("Micromax Bharat Go")
-        micromaxMobiles.add("Micromax Bharat 5 Pro")
-        micromaxMobiles.add("Micromax Bharat 5")
-        micromaxMobiles.add("Micromax Canvas 1")
-        micromaxMobiles.add("Micromax Dual 5")
-
-        val appleMobiles = ArrayList<String>()
-        appleMobiles.add("iPhone 8")
-        appleMobiles.add("iPhone 8 Plus")
-        appleMobiles.add("iPhone X")
-        appleMobiles.add("iPhone 7 Plus")
-        appleMobiles.add("iPhone 7")
-        appleMobiles.add("iPhone 6 Plus")
-
-        val samsungMobiles = ArrayList<String>()
-        samsungMobiles.add("Samsung Galaxy S9+")
-        samsungMobiles.add("Samsung Galaxy Note 7")
-        samsungMobiles.add("Samsung Galaxy Note 5 Dual")
-        samsungMobiles.add("Samsung Galaxy S8")
-        samsungMobiles.add("Samsung Galaxy A8")
-        samsungMobiles.add("Samsung Galaxy Note 4")
-
-        dataList["Redmi"] = redmiMobiles
-        dataList["Micromax"] = micromaxMobiles
-        dataList["Apple"] = appleMobiles
-        dataList["Samsung"] = samsungMobiles
+        kotlinViewModel.kotlinData.observe(this, Observer {
+            it.let {
+                it.forEach {
+                    dataList[it.question] = listOf(it.answer)
+                }
+            }
+        })
     }
 }

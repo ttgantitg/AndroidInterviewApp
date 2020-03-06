@@ -8,6 +8,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.room.Room
 import com.ttgantitg.androidinterviewapp.database.AppDatabase
+import com.ttgantitg.androidinterviewapp.ui.kotlin.KotlinViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -17,12 +18,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         createNavGraph()
-
-        val db = Room.databaseBuilder(
-            applicationContext,
-            AppDatabase::class.java, "interview.db"
-        ).build()
-
     }
 
     private fun createNavGraph() {
