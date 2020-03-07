@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.ttgantitg.androidinterviewapp.database.AppDatabase.Companion.DATABASE_VERSION
 
-@Database(entities = [Kotlin::class], version = DATABASE_VERSION)
+@Database(entities = [Kotlin::class], version = DATABASE_VERSION, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun kotlinDao(): KotlinDao
 
@@ -24,7 +24,6 @@ abstract class AppDatabase : RoomDatabase() {
             Room.databaseBuilder(context.applicationContext,
                 AppDatabase::class.java, DATABASE_NAME)
                 .createFromAsset("databases/$DATABASE_NAME")
-                .allowMainThreadQueries()
                 .build()
     }
 }

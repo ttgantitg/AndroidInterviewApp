@@ -10,7 +10,12 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.ttgantitg.androidinterviewapp.CustomExpandableListAdapter
 import com.ttgantitg.androidinterviewapp.R
+import com.ttgantitg.androidinterviewapp.database.Kotlin
 import com.ttgantitg.androidinterviewapp.di.Injection
+import io.reactivex.SingleObserver
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.Disposable
+import io.reactivex.schedulers.Schedulers
 
 class KotlinFragment : Fragment() {
 
@@ -20,6 +25,7 @@ class KotlinFragment : Fragment() {
     private var expandableListView: ExpandableListView? = null
     private var adapter: ExpandableListAdapter? = null
     private var dataList: HashMap<String, List<String>> = HashMap()
+    private var kotlinDataList: List<Kotlin> = mutableListOf()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,6 +36,7 @@ class KotlinFragment : Fragment() {
         viewModelFactory = Injection.provideViewModelFactory(context!!)
         expandableListView = root.findViewById(R.id.exp_list_view)
         prepareDataList()
+        prepareDataForExpListView(kotlinDataList)
         initExpListView()
         return root
     }
@@ -50,10 +57,21 @@ class KotlinFragment : Fragment() {
     }
 
     private fun prepareDataList() {
-        viewModel.getData().let {
-            it.forEach {
-                dataList[it.question] = listOf(it.answer)
-            }
+        viewModel.getData()
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe(object : SingleObserver<List<Kotlin>> {
+                override fun onSuccess(t: List<Kotlin>) {
+                    kotlinDataList = t
+                }
+                override fun onSubscribe(d: Disposable) {}
+                override fun onError(e: Throwable) {}
+            })
+    }
+
+    private fun prepareDataForExpListView(kotlinDataList: List<Kotlin>) {
+        kotlinDataList.forEach {
+            dataList[it.question] = listOf(it.answer)
         }
     }
 }
