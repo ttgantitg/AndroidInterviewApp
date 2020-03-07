@@ -35,10 +35,29 @@ class KotlinFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_kotlin, container, false)
         viewModelFactory = Injection.provideViewModelFactory(context!!)
         expandableListView = root.findViewById(R.id.exp_list_view)
-        prepareDataList()
-        prepareDataForExpListView(kotlinDataList)
-        initExpListView()
+        showDataList()
         return root
+    }
+
+    private fun showDataList() {
+        viewModel.getData()
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe(object : SingleObserver<List<Kotlin>> {
+                override fun onSuccess(t: List<Kotlin>) {
+                    kotlinDataList = t
+                    prepareDataForExpListView(kotlinDataList)
+                    initExpListView()
+                }
+                override fun onSubscribe(d: Disposable) {}
+                override fun onError(e: Throwable) {}
+            })
+    }
+
+    private fun prepareDataForExpListView(kotlinDataList: List<Kotlin>) {
+        kotlinDataList.forEach {
+            dataList[it.question] = listOf(it.answer)
+        }
     }
 
     private fun initExpListView() {
@@ -54,24 +73,6 @@ class KotlinFragment : Fragment() {
             }
             expandableListView!!.setAdapter(adapter)
         }
-    }
-
-    private fun prepareDataList() {
-        viewModel.getData()
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(object : SingleObserver<List<Kotlin>> {
-                override fun onSuccess(t: List<Kotlin>) {
-                    kotlinDataList = t
-                }
-                override fun onSubscribe(d: Disposable) {}
-                override fun onError(e: Throwable) {}
-            })
-    }
-
-    private fun prepareDataForExpListView(kotlinDataList: List<Kotlin>) {
-        kotlinDataList.forEach {
-            dataList[it.question] = listOf(it.answer)
-        }
+        expandableListView?.refreshDrawableState()
     }
 }
