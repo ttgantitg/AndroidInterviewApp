@@ -70,8 +70,4 @@ class CustomExpandableListAdapter (private val context: Context,
     override fun isChildSelectable(listPosition: Int, expandedListPosition: Int): Boolean {
         return true
     }
-
-    override fun notifyDataSetChanged() {
-        super.notifyDataSetChanged()
-    }
 }
