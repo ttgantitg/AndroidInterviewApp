@@ -8,14 +8,17 @@ import android.widget.ExpandableListAdapter
 import android.widget.ExpandableListView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.ttgantitg.androidinterviewapp.InterviewApplication
 import com.ttgantitg.androidinterviewapp.ui.CustomExpandableListAdapter
 import com.ttgantitg.androidinterviewapp.R
+import com.ttgantitg.androidinterviewapp.database.AppDatabase
 import com.ttgantitg.androidinterviewapp.database.entities.Kotlin
 import io.reactivex.SingleObserver
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import java.util.*
+import javax.inject.Inject
 import kotlin.collections.ArrayList
 
 class KotlinFragment : Fragment() {
@@ -28,13 +31,17 @@ class KotlinFragment : Fragment() {
     private var dataList: TreeMap<String, List<String>> = TreeMap()
     private var kotlinDataList: List<Kotlin> = mutableListOf()
 
+    @Inject
+    lateinit var mAppDatabase: AppDatabase
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fragment_kotlin, container, false)
-        viewModelFactory = Injection.provideKotlinViewModelFactory(context!!)
+        (activity?.application as InterviewApplication).getComponent()?.inject(this)
+        viewModelFactory = KotlinViewModelFactory(mAppDatabase.kotlinDao())
         expandableListView = root.findViewById(R.id.exp_list_view)
         showDataList()
         return root

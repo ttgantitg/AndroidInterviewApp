@@ -16,20 +16,3 @@ abstract class AppDatabase : RoomDatabase() {
 }
 
 private const val DATABASE_VERSION = 1
-
-//    companion object {
-//        const val DATABASE_VERSION = 1
-//        private const val DATABASE_NAME = "interview.db"
-//        @Volatile private var INSTANCE: AppDatabase? = null
-//
-//        fun getInstance(context: Context): AppDatabase =
-//            INSTANCE ?: synchronized(this) {
-//                INSTANCE ?: buildDatabase(context).also { INSTANCE = it }
-//            }
-//
-//        private fun buildDatabase(context: Context) =
-//            Room.databaseBuilder(context.applicationContext,
-//                AppDatabase::class.java, DATABASE_NAME)
-//                .createFromAsset("databases/$DATABASE_NAME")
-//                .build()
-//    }
