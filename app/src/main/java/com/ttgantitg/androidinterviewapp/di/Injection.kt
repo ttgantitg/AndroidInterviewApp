@@ -1,5 +1,7 @@
 package com.ttgantitg.androidinterviewapp.di
 
+package com.ttgantitg.androidinterviewapp.di
+
 import android.content.Context
 import com.ttgantitg.androidinterviewapp.database.AppDatabase
 import com.ttgantitg.androidinterviewapp.database.DataDao

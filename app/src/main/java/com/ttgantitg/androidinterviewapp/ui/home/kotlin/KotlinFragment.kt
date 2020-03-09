@@ -11,7 +11,6 @@ import androidx.fragment.app.viewModels
 import com.ttgantitg.androidinterviewapp.ui.CustomExpandableListAdapter
 import com.ttgantitg.androidinterviewapp.R
 import com.ttgantitg.androidinterviewapp.database.entities.Kotlin
-import com.ttgantitg.androidinterviewapp.di.Injection
 import io.reactivex.SingleObserver
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable

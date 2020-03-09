@@ -2,9 +2,9 @@ package com.ttgantitg.androidinterviewapp.ui.home.java
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.ttgantitg.androidinterviewapp.database.DataDao
+import com.ttgantitg.androidinterviewapp.database.dao.JavaDao
 
-class JavaViewModelFactory(private val dataSource: DataDao) : ViewModelProvider.Factory {
+class JavaViewModelFactory(private val dataSource: JavaDao) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(JavaViewModel::class.java)) {
