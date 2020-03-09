@@ -1,10 +1,10 @@
-package com.ttgantitg.androidinterviewapp.ui.java
+package com.ttgantitg.androidinterviewapp.ui.home.libs
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class JavaViewModel : ViewModel() {
+class LibsViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is home Fragment"

@@ -1,4 +1,4 @@
-package com.ttgantitg.androidinterviewapp.database
+package com.ttgantitg.androidinterviewapp.database.entities
 
 import androidx.annotation.NonNull
 import androidx.room.ColumnInfo

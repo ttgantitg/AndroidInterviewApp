@@ -36,31 +36,31 @@
 
     <fragment
         android:id="@+id/navigation_java"
-        android:name="com.ttgantitg.androidinterviewapp.ui.java.JavaFragment"
+        android:name="com.ttgantitg.androidinterviewapp.ui.home.java.JavaFragment"
         android:label="@string/java_questions"
         tools:layout="@layout/fragment_java" />
 
     <fragment
         android:id="@+id/navigation_kotlin"
-        android:name="com.ttgantitg.androidinterviewapp.ui.kotlin.KotlinFragment"
+        android:name="com.ttgantitg.androidinterviewapp.ui.home.kotlin.KotlinFragment"
         android:label="@string/kotlin_questions"
         tools:layout="@layout/fragment_kotlin" />
 
     <fragment
         android:id="@+id/navigation_android"
-        android:name="com.ttgantitg.androidinterviewapp.ui.android.AndroidFragment"
+        android:name="com.ttgantitg.androidinterviewapp.ui.home.android.AndroidFragment"
         android:label="@string/android_questions"
         tools:layout="@layout/fragment_android" />
 
     <fragment
         android:id="@+id/navigation_libs"
-        android:name="com.ttgantitg.androidinterviewapp.ui.libs.LibsFragment"
+        android:name="com.ttgantitg.androidinterviewapp.ui.home.libs.LibsFragment"
         android:label="@string/libs_questions"
         tools:layout="@layout/fragment_libs" />
 
     <fragment
         android:id="@+id/navigation_general"
-        android:name="com.ttgantitg.androidinterviewapp.ui.general.GeneralFragment"
+        android:name="com.ttgantitg.androidinterviewapp.ui.home.general.GeneralFragment"
         android:label="@string/general_questions"
         tools:layout="@layout/fragment_general" />
 

@@ -13,6 +13,7 @@
         android:paddingBottom="10dp"
         android:paddingStart="?android:attr/expandableListPreferredItemPaddingLeft"
         android:paddingTop="10dp"
+        android:paddingEnd="10dp"
         android:textColor="@color/colorAccent"
         tools:ignore="RtlSymmetry"
         android:textSize="18sp"/>

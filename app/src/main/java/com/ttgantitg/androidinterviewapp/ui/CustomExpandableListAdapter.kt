@@ -1,4 +1,4 @@
-package com.ttgantitg.androidinterviewapp
+package com.ttgantitg.androidinterviewapp.ui
 
 import android.content.Context
 import android.graphics.Typeface
@@ -7,10 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
 import android.widget.TextView
+import com.ttgantitg.androidinterviewapp.R
+import java.util.*
 
 class CustomExpandableListAdapter (private val context: Context,
                                    private val titleList: List<String>,
-                                   private val dataList: HashMap<String, List<String>>
+                                   private val dataList: TreeMap<String, List<String>>
                                    ) : BaseExpandableListAdapter() {
 
     override fun getChild(listPosition: Int, expandedListPosition: Int): Any {

@@ -1,4 +1,4 @@
-package com.ttgantitg.androidinterviewapp.ui.kotlin
+package com.ttgantitg.androidinterviewapp.ui.home.kotlin
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,14 +8,16 @@ import android.widget.ExpandableListAdapter
 import android.widget.ExpandableListView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.ttgantitg.androidinterviewapp.CustomExpandableListAdapter
+import com.ttgantitg.androidinterviewapp.ui.CustomExpandableListAdapter
 import com.ttgantitg.androidinterviewapp.R
-import com.ttgantitg.androidinterviewapp.database.Kotlin
+import com.ttgantitg.androidinterviewapp.database.entities.Kotlin
 import com.ttgantitg.androidinterviewapp.di.Injection
 import io.reactivex.SingleObserver
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
+import java.util.*
+import kotlin.collections.ArrayList
 
 class KotlinFragment : Fragment() {
 
@@ -24,7 +26,7 @@ class KotlinFragment : Fragment() {
     private val viewModel: KotlinViewModel by viewModels { viewModelFactory }
     private var expandableListView: ExpandableListView? = null
     private var adapter: ExpandableListAdapter? = null
-    private var dataList: HashMap<String, List<String>> = HashMap()
+    private var dataList: TreeMap<String, List<String>> = TreeMap()
     private var kotlinDataList: List<Kotlin> = mutableListOf()
 
     override fun onCreateView(
@@ -33,7 +35,7 @@ class KotlinFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fragment_kotlin, container, false)
-        viewModelFactory = Injection.provideViewModelFactory(context!!)
+        viewModelFactory = Injection.provideKotlinViewModelFactory(context!!)
         expandableListView = root.findViewById(R.id.exp_list_view)
         showDataList()
         return root

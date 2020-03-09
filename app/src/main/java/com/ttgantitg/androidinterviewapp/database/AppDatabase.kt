@@ -5,10 +5,12 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.ttgantitg.androidinterviewapp.database.AppDatabase.Companion.DATABASE_VERSION
+import com.ttgantitg.androidinterviewapp.database.entities.Java
+import com.ttgantitg.androidinterviewapp.database.entities.Kotlin
 
-@Database(entities = [Kotlin::class], version = DATABASE_VERSION, exportSchema = false)
+@Database(entities = [Java::class, Kotlin::class], version = DATABASE_VERSION, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun kotlinDao(): KotlinDao
+    abstract fun dataDao(): DataDao
 
     companion object {
         const val DATABASE_VERSION = 1
