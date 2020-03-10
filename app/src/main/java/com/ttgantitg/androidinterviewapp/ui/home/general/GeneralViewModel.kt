@@ -1,13 +1,12 @@
 package com.ttgantitg.androidinterviewapp.ui.home.general
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.ttgantitg.androidinterviewapp.database.dao.GeneralDao
+import com.ttgantitg.androidinterviewapp.database.entities.General
+import io.reactivex.Single
 
-class GeneralViewModel : ViewModel() {
-
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+class GeneralViewModel(private val dataSource: GeneralDao) : ViewModel() {
+    fun getData(): Single<List<General>> {
+        return dataSource.getAll()
     }
-    val text: LiveData<String> = _text
 }

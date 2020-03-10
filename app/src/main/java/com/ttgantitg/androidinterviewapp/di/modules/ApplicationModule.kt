@@ -1,7 +1,8 @@
-package com.ttgantitg.androidinterviewapp.di
+package com.ttgantitg.androidinterviewapp.di.modules
 
 import android.app.Application
 import android.content.Context
+import com.ttgantitg.androidinterviewapp.di.qualifiers.ApplicationContext
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton

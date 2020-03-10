@@ -1,4 +1,4 @@
-package com.ttgantitg.androidinterviewapp.di
+package com.ttgantitg.androidinterviewapp.di.qualifiers
 
 import javax.inject.Qualifier
 

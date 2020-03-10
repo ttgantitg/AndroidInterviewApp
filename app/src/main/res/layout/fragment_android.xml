@@ -6,9 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.android.AndroidFragment">
 
-    <TextView
+    <ExpandableListView
+        android:id="@+id/exp_list_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:dividerHeight="0.5dp"
+        android:groupIndicator="@drawable/exp_list_selector"
+        android:childDivider="@color/colorAccent" />
 
 </FrameLayout>

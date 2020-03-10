@@ -1,10 +1,11 @@
-package com.ttgantitg.androidinterviewapp.di
+package com.ttgantitg.androidinterviewapp.di.modules
 
 import android.content.Context
 import androidx.room.Room
 import com.ttgantitg.androidinterviewapp.database.AppDatabase
-import com.ttgantitg.androidinterviewapp.database.dao.JavaDao
-import com.ttgantitg.androidinterviewapp.database.dao.KotlinDao
+import com.ttgantitg.androidinterviewapp.database.dao.*
+import com.ttgantitg.androidinterviewapp.di.qualifiers.ApplicationContext
+import com.ttgantitg.androidinterviewapp.di.qualifiers.DatabaseInfo
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -47,5 +48,23 @@ class DatabaseModule(@ApplicationContext context: Context) {
     @Provides
     fun provideKotlinDao(db: AppDatabase): KotlinDao {
         return db.kotlinDao()
+    }
+
+    @Singleton
+    @Provides
+    fun provideAndroidDao(db: AppDatabase): AndroidDao {
+        return db.androidDao()
+    }
+
+    @Singleton
+    @Provides
+    fun provideLibsDao(db: AppDatabase): LibsDao {
+        return db.libsDao()
+    }
+
+    @Singleton
+    @Provides
+    fun provideGeneralDao(db: AppDatabase): GeneralDao {
+        return db.generalDao()
     }
 }
