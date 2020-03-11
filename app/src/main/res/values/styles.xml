@@ -1,6 +1,6 @@
 <resources>
 
-    <style name="AppDarkTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <style name="AppDarkTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <item name="colorPrimaryDark">@color/dTcolorPrimaryDark</item>
         <item name="colorBackground">@color/dTcolorBackground</item>
         <item name="colorPrimary">@color/dTcolorPrimary</item>
@@ -8,9 +8,11 @@
         <item name="colorAccent">@color/dTcolorAccent</item>
         <item name="colorTint">@color/dTcolorTint</item>
         <item name="colorPrimaryText">@color/dTcolorPrimaryText</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+        <item name="actionBarStyle">@style/DarkActionBar</item>
     </style>
 
-    <style name="AppLightTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <style name="AppLightTheme" parent="Theme.MaterialComponents.DayNight">
         <item name="colorPrimaryDark">@color/lTcolorPrimaryDark</item>
         <item name="colorBackground">@color/lTcolorBackground</item>
         <item name="colorPrimary">@color/lTcolorPrimary</item>
@@ -18,6 +20,25 @@
         <item name="colorAccent">@color/lTcolorAccent</item>
         <item name="colorTint">@color/lTcolorTint</item>
         <item name="colorPrimaryText">@color/lTcolorPrimaryText</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+        <item name="actionBarStyle">@style/LightActionBar</item>
+    </style>
+
+    <style name="WindowAnimationTransition">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="DarkActionBar" parent="@style/Widget.MaterialComponents.Light.ActionBar.Solid">
+        <item name="android:background">@color/dTcolorBackground</item>
+    </style>
+
+    <style name="LightActionBar" parent="@style/Widget.MaterialComponents.Light.ActionBar.Solid">
+        <item name="android:titleTextStyle">@style/ActionBar.TitleTextStyle</item>
+    </style>
+
+    <style name="ActionBar.TitleTextStyle" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/lTcolorPrimaryText</item>
     </style>
 
 </resources>

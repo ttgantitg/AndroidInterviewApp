@@ -20,31 +20,36 @@
             android:id="@+id/java_button"
             android:layout_width="200dp"
             android:layout_height="100dp"
-            android:text="@string/java_btn" />
+            android:text="@string/java_btn"
+            android:textColor="?attr/colorPrimaryText"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/kotlin_button"
             android:layout_width="200dp"
             android:layout_height="100dp"
-            android:text="@string/kotlin_btn" />
+            android:text="@string/kotlin_btn"
+            android:textColor="?attr/colorPrimaryText"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/android_button"
             android:layout_width="200dp"
             android:layout_height="100dp"
-            android:text="@string/android_btn" />
+            android:text="@string/android_btn"
+            android:textColor="?attr/colorPrimaryText"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/libs_button"
             android:layout_width="200dp"
             android:layout_height="100dp"
-            android:text="@string/libs_btn" />
+            android:text="@string/libs_btn"
+            android:textColor="?attr/colorPrimaryText"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/general_button"
             android:layout_width="200dp"
             android:layout_height="100dp"
-            android:text="@string/general_btn" />
+            android:text="@string/general_btn"
+            android:textColor="?attr/colorPrimaryText"/>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

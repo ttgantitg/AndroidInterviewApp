@@ -12,4 +12,5 @@
     <string name="android_btn">ANDROID</string>
     <string name="libs_btn">Библиотеки</string>
     <string name="general_btn">Общие вопросы</string>
+    <string name="select_dark_theme">Использовать тёмную тему</string>
 </resources>

@@ -10,10 +10,10 @@
     <color name="dTcolorPrimaryText">#FFFFFF</color>
     //light_theme
     <color name="lTcolorPrimaryDark">#263238</color>
-    <color name="lTcolorBackground">#37474F</color>
-    <color name="lTcolorPrimary">#455A64</color>
-    <color name="lTcolorBottomNav">#546E7A</color>
+    <color name="lTcolorBackground">#FFFFFF</color>
+    <color name="lTcolorPrimary">#FFFFFF</color>
+    <color name="lTcolorBottomNav">#FFFFFF</color>
     <color name="lTcolorAccent">#F9AA33</color>
-    <color name="lTcolorTint">#FFFFFF</color>
-    <color name="lTcolorPrimaryText">#FFFFFF</color>
+    <color name="lTcolorTint">#000000</color>
+    <color name="lTcolorPrimaryText">#000000</color>
 </resources>
