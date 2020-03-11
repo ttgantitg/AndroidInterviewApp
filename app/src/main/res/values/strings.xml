@@ -7,4 +7,9 @@
     <string name="android_questions">Вопросы по Android</string>
     <string name="libs_questions">Вопросы по библиотекам</string>
     <string name="general_questions">Общие вопросы</string>
+    <string name="java_btn">JAVA</string>
+    <string name="kotlin_btn">KOTLIN</string>
+    <string name="android_btn">ANDROID</string>
+    <string name="libs_btn">Библиотеки</string>
+    <string name="general_btn">Общие вопросы</string>
 </resources>

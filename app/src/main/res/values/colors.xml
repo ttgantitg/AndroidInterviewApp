@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimaryDark">#263238</color>
-    <color name="colorBackground">#37474F</color>
-    <color name="colorPrimary">#455A64</color>
-    <color name="colorBottomNav">#546E7A</color>
-    <color name="colorAccent">#F9AA33</color>
-    <color name="colorTint">#FFFFFF</color>
-    <color name="colorPrimaryText">#FFFFFF</color>
+    //dark_theme
+    <color name="dTcolorPrimaryDark">#263238</color>
+    <color name="dTcolorBackground">#37474F</color>
+    <color name="dTcolorPrimary">#455A64</color>
+    <color name="dTcolorBottomNav">#546E7A</color>
+    <color name="dTcolorAccent">#F9AA33</color>
+    <color name="dTcolorTint">#FFFFFF</color>
+    <color name="dTcolorPrimaryText">#FFFFFF</color>
+    //light_theme
+    <color name="lTcolorPrimaryDark">#263238</color>
+    <color name="lTcolorBackground">#37474F</color>
+    <color name="lTcolorPrimary">#455A64</color>
+    <color name="lTcolorBottomNav">#546E7A</color>
+    <color name="lTcolorAccent">#F9AA33</color>
+    <color name="lTcolorTint">#FFFFFF</color>
+    <color name="lTcolorPrimaryText">#FFFFFF</color>
 </resources>

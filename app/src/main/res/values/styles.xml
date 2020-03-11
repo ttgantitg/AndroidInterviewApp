@@ -1,11 +1,23 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="AppDarkTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimaryDark">@color/dTcolorPrimaryDark</item>
+        <item name="colorBackground">@color/dTcolorBackground</item>
+        <item name="colorPrimary">@color/dTcolorPrimary</item>
+        <item name="colorBottomNav">@color/dTcolorBottomNav</item>
+        <item name="colorAccent">@color/dTcolorAccent</item>
+        <item name="colorTint">@color/dTcolorTint</item>
+        <item name="colorPrimaryText">@color/dTcolorPrimaryText</item>
+    </style>
+
+    <style name="AppLightTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimaryDark">@color/lTcolorPrimaryDark</item>
+        <item name="colorBackground">@color/lTcolorBackground</item>
+        <item name="colorPrimary">@color/lTcolorPrimary</item>
+        <item name="colorBottomNav">@color/lTcolorBottomNav</item>
+        <item name="colorAccent">@color/lTcolorAccent</item>
+        <item name="colorTint">@color/lTcolorTint</item>
+        <item name="colorPrimaryText">@color/lTcolorPrimaryText</item>
     </style>
 
 </resources>

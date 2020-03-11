@@ -13,6 +13,6 @@
         android:textSize="16sp"
         android:dividerHeight="0.5dp"
         android:groupIndicator="@drawable/exp_list_selector"
-        android:childDivider="@color/colorAccent" />
+        android:childDivider="?attr/colorAccent" />
 
 </FrameLayout>
