@@ -2,17 +2,10 @@
 <layer-list
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:opacity="opaque">
-
-    <!-- Цвет фона, предпочтительно как в главной теме -->
     <item android:drawable="?attr/colorBackground"/>
-
-    <!-- Лого приложения - 144dp версия иконки приложения -->
-<!--    <item>-->
-
-<!--        <bitmap-->
-<!--            android:src="@drawable/ic_home"-->
-<!--            android:gravity="center"/>-->
-
-<!--    </item>-->
-
+    <item>
+        <bitmap
+            android:src="@drawable/launch_picture"
+            android:gravity="center"/>
+    </item>
 </layer-list>

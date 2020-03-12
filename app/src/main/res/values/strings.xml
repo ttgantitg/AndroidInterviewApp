@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Вопросы к собеседованию</string>
-    <string name="title_home">Домой</string>
+    <string name="app_name">Android собеседование</string>
+    <string name="title_home">Главная</string>
     <string name="title_settings">Настройки</string>
     <string name="java_questions">Вопросы по Java</string>
     <string name="kotlin_questions">Вопросы по Kotlin</string>

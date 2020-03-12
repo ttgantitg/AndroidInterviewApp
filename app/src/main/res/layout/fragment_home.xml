@@ -20,38 +20,48 @@
             android:id="@+id/java_button"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-            android:layout_width="200dp"
-            android:layout_height="100dp"
+            android:layout_width="300dp"
+            android:layout_height="120dp"
             android:text="@string/java_btn"
-            android:textColor="?attr/colorPrimaryText" />
+            android:textColor="?attr/colorPrimaryText"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/kotlin_button"
-            android:layout_width="200dp"
-            android:layout_height="100dp"
+            android:layout_width="300dp"
+            android:layout_height="120dp"
             android:text="@string/kotlin_btn"
-            android:textColor="?attr/colorPrimaryText" />
+            android:textColor="?attr/colorPrimaryText"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/android_button"
-            android:layout_width="200dp"
-            android:layout_height="100dp"
+            android:layout_width="300dp"
+            android:layout_height="120dp"
             android:text="@string/android_btn"
-            android:textColor="?attr/colorPrimaryText" />
+            android:textColor="?attr/colorPrimaryText"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/libs_button"
-            android:layout_width="200dp"
-            android:layout_height="100dp"
+            android:layout_width="300dp"
+            android:layout_height="120dp"
             android:text="@string/libs_btn"
-            android:textColor="?attr/colorPrimaryText" />
+            android:textColor="?attr/colorPrimaryText"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/general_button"
-            android:layout_width="200dp"
-            android:layout_height="100dp"
+            android:layout_width="300dp"
+            android:layout_height="120dp"
             android:text="@string/general_btn"
-            android:textColor="?attr/colorPrimaryText" />
+            android:textColor="?attr/colorPrimaryText"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
