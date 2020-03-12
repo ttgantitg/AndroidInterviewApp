@@ -1,8 +1,9 @@
 package com.ttgantitg.androidinterviewapp
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -11,16 +12,21 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var mSharedPref: SharedPreferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
         checkThemeColor()
+        super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         createNavGraph()
     }
 
     private fun checkThemeColor() {
-        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+        mSharedPref = getSharedPreferences("mPref", Context.MODE_PRIVATE)
+        if (mSharedPref.getBoolean("NightMode", false)) {
             setTheme(R.style.AppDarkTheme)
+        } else {
+            setTheme(R.style.AppLightTheme)
         }
     }
 
