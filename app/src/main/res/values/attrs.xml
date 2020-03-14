@@ -8,5 +8,11 @@
         <attr name="colorAccent" format="color"/>
         <attr name="colorTint" format="color"/>
         <attr name="colorPrimaryText" format="color"/>
+
+        <attr name="colorJavaText" format="color"/>
+        <attr name="colorKotlinText" format="color"/>
+        <attr name="colorAndroidText" format="color"/>
+        <attr name="colorLibsText" format="color"/>
+        <attr name="colorGeneralText" format="color"/>
     </declare-styleable>
 </resources>

@@ -18,39 +18,52 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/java_button"
+            style="@style/Widget.MaterialComponents.Button.Icon"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_width="300dp"
             android:layout_height="120dp"
             android:text="@string/java_btn"
-            android:textColor="?attr/colorPrimaryText"
+            android:textColor="?attr/colorJavaText"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            app:icon="@drawable/ic_java"
+            app:iconGravity="textStart"
+            app:iconSize="30dp"
+            app:iconTint="?attr/colorJavaText"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/kotlin_button"
             android:layout_width="300dp"
             android:layout_height="120dp"
             android:text="@string/kotlin_btn"
-            android:textColor="?attr/colorPrimaryText"
+            android:textColor="?attr/colorKotlinText"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            app:icon="@drawable/ic_kotlin"
+            app:iconGravity="textStart"
+            app:iconSize="24dp"
+            app:iconTint="?attr/colorKotlinText"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/android_button"
             android:layout_width="300dp"
             android:layout_height="120dp"
             android:text="@string/android_btn"
-            android:textColor="?attr/colorPrimaryText"
+            android:textColor="?attr/colorAndroidText"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            app:icon="@drawable/ic_android"
+            app:iconGravity="textStart"
+            app:iconSize="24dp"
+            app:iconTint="?attr/colorAndroidText"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/libs_button"
             android:layout_width="300dp"
             android:layout_height="120dp"
             android:text="@string/libs_btn"
-            android:textColor="?attr/colorPrimaryText"
+            android:textColor="?attr/colorLibsText"
             android:textSize="20sp"
             android:textStyle="bold"/>
 
@@ -59,7 +72,7 @@
             android:layout_width="300dp"
             android:layout_height="120dp"
             android:text="@string/general_btn"
-            android:textColor="?attr/colorPrimaryText"
+            android:textColor="?attr/colorGeneralText"
             android:textSize="20sp"
             android:textStyle="bold"/>
 
