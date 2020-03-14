@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android собеседование</string>
+    <string name="title_home">Главная</string>
+    <string name="title_settings">Настройки</string>
+    <string name="java_questions">Вопросы по Java</string>
+    <string name="kotlin_questions">Вопросы по Kotlin</string>
+    <string name="android_questions">Вопросы по Android</string>
+    <string name="libs_questions">Вопросы по библиотекам</string>
+    <string name="general_questions">Общие вопросы</string>
+    <string name="java_btn">JAVA</string>
+    <string name="kotlin_btn">KOTLIN</string>
+    <string name="android_btn">ANDROID</string>
+    <string name="libs_btn">Библиотеки</string>
+    <string name="general_btn">Общие вопросы</string>
+    <string name="select_dark_theme">Использовать тёмную тему</string>
+    <string name="rate_dialog_title">Оцените приложение</string>
+    <string name="rate_dialog_message">Если вам понравилось это приложение, не могли бы вы уделить время и оцените его в Google Play? Это не займет больше минуты. Спасибо за вашу поддержку!</string>
+    <string name="rate_dialog_ok">Оценить сейчас</string>
+    <string name="rate_dialog_cancel">Напомнить позже</string>
+    <string name="rate_dialog_no">Нет, спасибо</string>
+</resources>

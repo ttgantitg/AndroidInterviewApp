@@ -63,6 +63,8 @@ dependencies {
     implementation 'com.google.dagger:dagger-android:2.20'
     kapt 'com.google.dagger:dagger-android-processor:2.20'
     kapt 'com.google.dagger:dagger-compiler:2.20'
+    //rate app
+    implementation "com.vorlonsoft:androidrate:1.2.1"
     //test
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

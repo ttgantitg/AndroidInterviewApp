@@ -8,6 +8,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.vorlonsoft.android.rate.AppRate
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -17,6 +18,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         checkThemeColor()
         super.onCreate(savedInstanceState)
+
+        AppRate.with(this)
+            .setInstallDays(0)
+            .setLaunchTimes(3)
+            .setRemindInterval(2)
+            .setShowLaterButton(true)
+            .setDebug(true)
+            .setThemeResId(R.style.RateDialog)
+            .monitor()
+        AppRate.showRateDialogIfMeetsConditions(this)
+
         setContentView(R.layout.activity_main)
         createNavGraph()
     }

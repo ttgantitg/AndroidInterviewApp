@@ -55,4 +55,15 @@
         <item name="android:textColor">@color/lTcolorPrimaryText</item>
     </style>
 
+    //dialog style
+    <style name="RateDialog" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="android:buttonBarPositiveButtonStyle">@style/ButtonDialog</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/ButtonDialog</item>
+        <item name="android:buttonBarNeutralButtonStyle">@style/ButtonDialog</item>
+    </style>
+
+    <style name="ButtonDialog">
+        <item name="android:textColor">@color/dTcolorAccent</item>
+    </style>
+
 </resources>
