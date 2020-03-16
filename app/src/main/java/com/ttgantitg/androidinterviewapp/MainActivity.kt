@@ -18,17 +18,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         checkThemeColor()
         super.onCreate(savedInstanceState)
-
-        AppRate.with(this)
-            .setInstallDays(0)
-            .setLaunchTimes(3)
-            .setRemindInterval(2)
-            .setShowLaterButton(true)
-            .setDebug(true)
-            .setThemeResId(R.style.RateDialog)
-            .monitor()
-        AppRate.showRateDialogIfMeetsConditions(this)
-
+        setupRateDialog()
         setContentView(R.layout.activity_main)
         createNavGraph()
     }
@@ -40,6 +30,18 @@ class MainActivity : AppCompatActivity() {
         } else {
             setTheme(R.style.AppLightTheme)
         }
+    }
+
+    private fun setupRateDialog() {
+        AppRate.with(this)
+            .setInstallDays(0)
+            .setLaunchTimes(3)
+            .setRemindInterval(2)
+            .setShowLaterButton(true)
+            .setDebug(true)
+            .setThemeResId(R.style.RateDialog)
+            .monitor()
+        AppRate.showRateDialogIfMeetsConditions(this)
     }
 
     private fun createNavGraph() {
