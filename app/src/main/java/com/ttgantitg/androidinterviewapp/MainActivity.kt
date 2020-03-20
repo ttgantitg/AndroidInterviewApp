@@ -35,9 +35,9 @@ class MainActivity : AppCompatActivity() {
     private fun setupRateDialog() {
         AppRate.with(this)
             .setInstallDays(1)
-            .setLaunchTimes(3)
+            .setLaunchTimes(1)
             .setRemindInterval(1)
-            .setRemindLaunchesNumber(3)
+            .setRemindLaunchesNumber(1)
             .setShowLaterButton(true)
             .setThemeResId(R.style.RateDialog)
             .monitor()
