@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //dark_theme
+    <color name="dTcolorPrimaryDark">#263238</color>
+    <color name="dTcolorBackground">#37474F</color>
+    <color name="dTcolorPrimary">#455A64</color>
+    <color name="dTcolorBottomNav">#546E7A</color>
+    <color name="dTcolorAccent">#F9AA33</color>
+    <color name="dTcolorTint">#FFFFFF</color>
+    <color name="dTcolorPrimaryText">#FFFFFF</color>
+    <color name="dTcolorJavaText">#ef9a9a</color>
+    <color name="dTcolorKotlinText">#ffcc80</color>
+    <color name="dTcolorAndroidText">#c5e1a5</color>
+    <color name="dTcolorLibsText">#ce93d8</color>
+    <color name="dTcolorGeneralText">#b39ddb</color>
+    //light_theme
+    <color name="lTcolorPrimaryDark">#263238</color>
+    <color name="lTcolorBackground">#FFFFFF</color>
+    <color name="lTcolorPrimary">#FFFFFF</color>
+    <color name="lTcolorBottomNav">#FFFFFF</color>
+    <color name="lTcolorAccent">#F9AA33</color>
+    <color name="lTcolorTint">#000000</color>
+    <color name="lTcolorPrimaryText">#000000</color>
+    <color name="lTcolorJavaText">#f44336</color>
+    <color name="lTcolorKotlinText">#ff9800</color>
+    <color name="lTcolorAndroidText">#8bc34a</color>
+    <color name="lTcolorLibsText">#9c27b0</color>
+    <color name="lTcolorGeneralText">#673ab7</color>
+</resources>
