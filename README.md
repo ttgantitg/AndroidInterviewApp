@@ -6,7 +6,5 @@ Q & A application to prepare for an interview on the position of the Android-dev
 Tech stack: Kotlin, MVVM, Room, RxJava, Dagger.
 <br>
 <br>
-<p align="center">
-  <img src="https://ibb.co/DQkvgS8" width="350" alt="accessibility text">
-</p>
+
 <br>
