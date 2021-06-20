@@ -1,5 +1,6 @@
 package com.ttgantitg.androidinterviewapp.presentation
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Typeface
 import android.view.LayoutInflater
@@ -10,10 +11,16 @@ import android.widget.TextView
 import com.ttgantitg.androidinterviewapp.R
 import java.util.*
 
-class CustomExpandableListAdapter (private val context: Context,
-                                   private val titleList: List<String>,
-                                   private val dataList: TreeMap<String, List<String>>
-                                   ) : BaseExpandableListAdapter() {
+class CustomExpandableListAdapter (private val context: Context) : BaseExpandableListAdapter() {
+
+    private var titleList: List<String> = listOf()
+    private var dataList: TreeMap<String, List<String>> = TreeMap()
+
+    fun submitList(titleList: List<String>, dataList: TreeMap<String, List<String>>) {
+        this.titleList = titleList
+        this.dataList = dataList
+        notifyDataSetChanged()
+    }
 
     override fun getChild(listPosition: Int, expandedListPosition: Int): Any {
         return this.dataList[this.titleList[listPosition]]!![expandedListPosition]
@@ -23,8 +30,9 @@ class CustomExpandableListAdapter (private val context: Context,
         return expandedListPosition.toLong()
     }
 
+    @SuppressLint("InflateParams")
     override fun getChildView(listPosition: Int, expandedListPosition: Int,
-        isLastChild: Boolean, convertView: View?, parent: ViewGroup): View {
+                              isLastChild: Boolean, convertView: View?, parent: ViewGroup): View {
         var mConvertView = convertView
         val expandedListText = getChild(listPosition, expandedListPosition) as String
         if (mConvertView == null) {
@@ -52,6 +60,7 @@ class CustomExpandableListAdapter (private val context: Context,
         return listPosition.toLong()
     }
 
+    @SuppressLint("InflateParams")
     override fun getGroupView(listPosition: Int, isExpanded: Boolean, convertView: View?, parent: ViewGroup): View {
         var mConvertView = convertView
         val listTitle = getGroup(listPosition) as String

@@ -8,5 +8,5 @@ import io.reactivex.Single
 @Dao
 interface AndroidDao {
     @Query("SELECT * FROM android")
-    fun getAll(): Single<List<Android>>
+    suspend fun getAll(): List<Android>
 }
