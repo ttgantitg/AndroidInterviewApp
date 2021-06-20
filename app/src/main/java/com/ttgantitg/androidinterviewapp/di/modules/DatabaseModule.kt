@@ -2,8 +2,8 @@ package com.ttgantitg.androidinterviewapp.di.modules
 
 import android.content.Context
 import androidx.room.Room
-import com.ttgantitg.androidinterviewapp.database.AppDatabase
-import com.ttgantitg.androidinterviewapp.database.dao.*
+import com.ttgantitg.androidinterviewapp.data.AppDatabase
+import com.ttgantitg.androidinterviewapp.data.dao.*
 import com.ttgantitg.androidinterviewapp.di.qualifiers.ApplicationContext
 import com.ttgantitg.androidinterviewapp.di.qualifiers.DatabaseInfo
 import dagger.Module

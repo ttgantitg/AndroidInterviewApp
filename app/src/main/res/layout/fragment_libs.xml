@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.libs.LibsFragment">
+    tools:context=".presentation.home.libs.LibsFragment">
 
     <ExpandableListView
         android:id="@+id/exp_list_view"

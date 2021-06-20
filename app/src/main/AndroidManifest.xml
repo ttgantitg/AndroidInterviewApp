@@ -21,7 +21,7 @@
         android:theme="@style/AppLightTheme.Launcher"
         tools:ignore="AllowBackup">
         <activity
-            android:name=".MainActivity"
+            android:name=".presentation.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
