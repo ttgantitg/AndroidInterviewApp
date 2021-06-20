@@ -9,8 +9,8 @@ import android.widget.ExpandableListView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.ttgantitg.androidinterviewapp.InterviewApplication
-import com.ttgantitg.androidinterviewapp.R
 import com.ttgantitg.androidinterviewapp.data.entities.General
+import com.ttgantitg.androidinterviewapp.databinding.FragmentGeneralBinding
 import com.ttgantitg.androidinterviewapp.presentation.CustomExpandableListAdapter
 import io.reactivex.SingleObserver
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -24,7 +24,8 @@ class GeneralFragment : Fragment() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
-    lateinit var generalViewModel: GeneralViewModel
+    private lateinit var generalViewModel: GeneralViewModel
+    private lateinit var binding: FragmentGeneralBinding
 
     private lateinit var titleList: List<String>
     private var expandableListView: ExpandableListView? = null
@@ -32,17 +33,13 @@ class GeneralFragment : Fragment() {
     private var dataList: TreeMap<String, List<String>> = TreeMap()
     private var generalDataList: List<General> = mutableListOf()
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val root = inflater.inflate(R.layout.fragment_general, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        binding = FragmentGeneralBinding.inflate(inflater, container, false)
         (activity?.application as InterviewApplication).getComponent()?.inject(this)
         generalViewModel = ViewModelProvider(this, viewModelFactory).get(GeneralViewModel::class.java)
-        expandableListView = root.findViewById(R.id.exp_list_view)
+        expandableListView = binding.expListView
         showDataList()
-        return root
+        return binding.root
     }
 
     private fun showDataList() {
@@ -70,13 +67,11 @@ class GeneralFragment : Fragment() {
         if (expandableListView != null) {
             val listData = dataList
             titleList = ArrayList(listData.keys)
-            adapter = context?.let {
-                CustomExpandableListAdapter(
-                    it,
-                    titleList as ArrayList<String>,
-                    listData
-                )
-            }
+            adapter = CustomExpandableListAdapter(
+                requireContext(),
+                titleList as ArrayList<String>,
+                listData
+            )
             expandableListView!!.setAdapter(adapter)
         }
         expandableListView?.refreshDrawableState()
