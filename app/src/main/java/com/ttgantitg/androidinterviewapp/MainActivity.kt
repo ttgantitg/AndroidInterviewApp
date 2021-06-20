@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
@@ -45,7 +45,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun createNavGraph() {
-        val navController = findNavController(R.id.nav_host_fragment)
+
+        val navController = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.navigation_home,
@@ -57,7 +58,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_general
             )
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        bottom_nav_view?.setupWithNavController(navController)
+        setupActionBarWithNavController(navController.navController, appBarConfiguration)
+        bottom_nav_view?.setupWithNavController(navController.navController)
     }
 }
