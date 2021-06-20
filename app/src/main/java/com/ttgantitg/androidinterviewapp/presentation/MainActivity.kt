@@ -12,7 +12,6 @@ import androidx.navigation.ui.setupWithNavController
 import com.ttgantitg.androidinterviewapp.R
 import com.ttgantitg.androidinterviewapp.databinding.ActivityMainBinding
 import com.vorlonsoft.android.rate.AppRate
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -64,6 +63,6 @@ class MainActivity : AppCompatActivity() {
             )
         )
         setupActionBarWithNavController(navController.navController, appBarConfiguration)
-        bottom_nav_view?.setupWithNavController(navController.navController)
+        binding.bottomNavView.setupWithNavController(navController.navController)
     }
 }
